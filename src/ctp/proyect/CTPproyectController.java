@@ -19,53 +19,37 @@ import javafx.stage.Stage;
  *
  * @author Dits
  */
-public class CTPproyectController  {
+public class CTPproyectController implements Initializable {
    
-    @FXML
-    private Button AgregarMiembro;
     
-     @FXML
-    private Button BuscarMiembro;
-    
-     @FXML
-    private Button EliminarMiembro;
-    
-     @FXML
-    private Button Estadisticas;
-    
-    
-    public void initialize(Stage primaryStage) {
-        final Agregar a = new Agregar();
-        //primer Boton
-        AgregarMiembro.setOnAction(new EventHandler<ActionEvent>() {
-      @Override public void handle(ActionEvent event) {
-         System.out.println("este funciona");
-       a.start(primaryStage);
-      }
-    });
+       @FXML
+    private void Agregar(ActionEvent event) {
+        System.out.println("You clicked me!");
         
-           BuscarMiembro.setOnAction(new EventHandler<ActionEvent>() {
-      @Override public void handle(ActionEvent event) {
-          
-       a.start(primaryStage);
-      }
-    });
-           
-        EliminarMiembro.setOnAction(new EventHandler<ActionEvent>() {
-      @Override public void handle(ActionEvent event) {
-          
-       a.start(primaryStage);
-      }
-    });      
+    }
+    
+       @FXML
+    private void Buscar(ActionEvent event) {
+        System.out.println("funciona 2");
         
-           Estadisticas.setOnAction(new EventHandler<ActionEvent>() {
-      @Override public void handle(ActionEvent event) {
-          
-       a.start(primaryStage);
-      }
-    });
+    }
+    
+       @FXML
+    private void eliminar(ActionEvent event) {
+        System.out.println("funciona 3");
         
-    }    
+    }
+    
+       @FXML
+    private void estadisticas(ActionEvent event) {
+        System.out.println("funciona 4");
+        
+    }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }  
     
    
    

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -11,7 +10,6 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctp.proyect.CTPproyectController">
     <children>
-      <Label text="Label" />
       <VBox prefHeight="400.0" prefWidth="640.0">
         <children>
           <MenuBar VBox.vgrow="NEVER">
@@ -55,10 +53,10 @@
           </MenuBar>
           <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                  <Button fx:id="AgregarMiembro" layoutX="278.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#handle" text="Agregar Mienbro" />
-                  <Button fx:id="BuscarMiembro" layoutX="278.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Buscar Mienbro" />
-                  <Button fx:id="EliminarMiembro" layoutX="278.0" layoutY="192.0" mnemonicParsing="false" text="Eliminar Miembro" />
-                  <Button fx:id="Estadisticas" layoutX="278.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Estadisticas" />
+                  <Button layoutX="278.0" layoutY="93.0" mnemonicParsing="false" onAction="#Agregar" text="Agregar Miembro" />
+                  <Button layoutX="278.0" layoutY="144.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="25.0" prefWidth="107.0" text="Buscar Mienbro" />
+                  <Button layoutX="278.0" layoutY="192.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar Miembro" />
+                  <Button layoutX="278.0" layoutY="237.0" mnemonicParsing="false" onAction="#estadisticas" prefHeight="25.0" prefWidth="107.0" text="Estadisticas" />
             </children>
           </AnchorPane>
         </children>
