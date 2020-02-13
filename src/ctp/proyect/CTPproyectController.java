@@ -5,14 +5,21 @@
  */
 package ctp.proyect;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.event.*;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -20,29 +27,50 @@ import javafx.stage.Stage;
  * @author Dits
  */
 public class CTPproyectController implements Initializable {
+ 
+
+       @FXML
+    private void Agregar(ActionEvent event) throws IOException {
    
+      Parent parent =FXMLLoader.load(getClass().getResource("Agregar.fxml"));
+    Stage stage =new Stage();
+    Scene scene = new Scene (parent);
+    stage.setScene(scene);
+    stage.setTitle("Menu de Añadir Miembros");
+    stage.show();
+
+    }
     
        @FXML
-    private void Agregar(ActionEvent event) {
-        System.out.println("You clicked me!");
+    private void Buscar(ActionEvent event) throws IOException {
+          Parent parent =FXMLLoader.load(getClass().getResource("Buscar.fxml"));
+    Stage stage =new Stage();
+    Scene scene = new Scene (parent);
+    stage.setScene(scene);
+    stage.setTitle("Menu para Buscar Miembros");
+    stage.show();
         
     }
     
        @FXML
-    private void Buscar(ActionEvent event) {
-        System.out.println("funciona 2");
+    private void eliminar(ActionEvent event) throws IOException {
+         Parent parent =FXMLLoader.load(getClass().getResource("Eliminar.fxml"));
+    Stage stage =new Stage();
+    Scene scene = new Scene (parent);
+    stage.setScene(scene);
+    stage.setTitle("Menu para Eliminar Miembros");
+    stage.show();
         
     }
     
        @FXML
-    private void eliminar(ActionEvent event) {
-        System.out.println("funciona 3");
-        
-    }
-    
-       @FXML
-    private void estadisticas(ActionEvent event) {
-        System.out.println("funciona 4");
+    private void estadisticas(ActionEvent event) throws IOException {
+          Parent parent =FXMLLoader.load(getClass().getResource("Estadisticas.fxml"));
+    Stage stage =new Stage();
+    Scene scene = new Scene (parent);
+    stage.setScene(scene);
+    stage.setTitle("Menu de Estadisticas");
+    stage.show();
         
     }
     
